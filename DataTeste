@@ -1,0 +1,46 @@
+package udemy.classe.Datas;
+
+import java.util.Scanner;
+
+public class DataTeste {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Data niver1 = new Data();
+        niver1.dia = 10;
+        niver1.mes = 04;
+        niver1.ano = 1984;
+        niver1.nome = "Salomao";
+
+        Data niver2 = new Data();
+        niver2.dia = 10;
+        niver2.mes = 04;
+        niver2.ano = 1984;
+        niver2.nome = "Simone";
+
+        System.out.println("Vamos calcular sua idade exata ");
+        System.out.printf("Que o dia vc esta: ");
+        int diaAtual = sc.nextInt();
+        System.out.printf("Que o mes vc esta: ");
+        int mesAtual = sc.nextInt();
+        System.out.printf("Que o ano vc esta: ");
+        int anoAtual = sc.nextInt();
+
+        int diaExato = diaAtual - niver1.dia;
+        int mesEaxto = mesAtual - niver1.mes;
+        int anoExato = anoAtual - niver1.ano;
+
+        int anoQueVem = anoAtual + 1;
+
+        System.out.println("Voce tem " + anoExato + " anos " +
+                mesEaxto + " meses e " + diaExato + " dias !");
+
+        int idadeQueVem = (anoAtual - niver1.ano) + 1;
+
+
+        System.out.println("Seu proximo aniversario, em " +
+                anoQueVem + ", vc fara " + idadeQueVem + " anos");
+
+
+    }
+}
